@@ -302,7 +302,7 @@ button {
 }
 
 .banner_taital {
-    width: 30%;
+   
     font-size: 60px;
     color: #222222;
     font-weight: bold;
@@ -314,7 +314,37 @@ button {
     color: #222222;
     margin: 0px;
 }
+.banner_img{
+    position: relative;
+    top: -100px; 
+    right: -120px;
+}
 
+@media (max-width: 992px) { 
+    .banner_img {
+        top: -50px; 
+        right: -60px; 
+    }
+}
+
+@media (max-width: 768px) { 
+    .banner_img {
+        top: -30px; 
+        right: 0;
+    }
+}
+
+
+@media (max-width: 480px) { 
+    .banner_img {
+        top: 0px; 
+        right: 0; 
+        text-align: center;
+    }
+    .banner_img img {
+        max-width: 80%; 
+    }
+}
 .started_text {
     width: 170px;
     float: left;
