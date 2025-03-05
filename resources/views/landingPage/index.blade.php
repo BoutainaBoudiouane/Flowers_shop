@@ -29,9 +29,8 @@
    <!-- Tweaks for older IEs-->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
- />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
 <body>
@@ -81,7 +80,7 @@
                      <div class="started_text"><a href="#flower">Browse Flowers</a></div>
                   </div>
                   <div class="col-sm-6">
-                     <div class="banner_img" ><img src="images/img_home.png"></div>
+                     <div class="banner_img"><img src="images/img_home.png"></div>
                   </div>
                </div>
             </div>
@@ -90,7 +89,7 @@
    </div>
    <!-- banner section end -->
 
-   <!-- about sectuion start -->
+   <!-- about section start -->
    <div class="about_section layout_padding" id="about">
       <div class="container">
          <div class="row">
@@ -102,83 +101,95 @@
                <p class="about_text">Garden Glow is more than just a flower shop – we're passionate storytellers who believe in the power of nature's most beautiful creations. Founded by a family of flower enthusiasts, we carefully craft each bouquet with love, selecting the freshest blooms from local growers to create arrangements that speak directly to the heart. From celebrating life's joyous moments to offering comfort during challenging times, our flowers are designed to transform emotions into living, breathing art that connects people and creates memories that last far beyond the petals.</p>
                <div class="read_bt_1 " style="display: flex; gap: 20px; align-items: center;">
                   <div style="display: flex; align-items: center;">
-                  <i class="fa-solid fa-users fa-2x text-gradient flex-shrink-0 mt-1" style="color: #E5187B; font-size:50px"></i>
-                  <span style="color: black; font-weight: bold; font-size:40px; margin-left:10px; font-family: Gill Sans ">25</span><br>
-                  <span style="color: green;font-size:17px; margin-left:4px; font-family: Gill Sans; font-weight: bold;margin-left:10px ">Loyal Customer</span>
+                     <i class="fa-solid fa-users fa-2x text-gradient flex-shrink-0 mt-1" style="color: #E5187B; font-size:50px"></i>
+                     <span style="color: black; font-weight: bold; font-size:40px; margin-left:10px; font-family: Gill Sans ">25</span><br>
+                     <span style="color: green;font-size:17px; margin-left:4px; font-family: Gill Sans; font-weight: bold;margin-left:10px ">Loyal Customer</span>
                   </div>
                   <div style="display: flex; align-items: center; margin-left:70px">
-                  <i class="fa-solid fa-clipboard-check fa-2x text-gradient flex-shrink-0 mt-1" style="color: #E5187B; font-size:50px"></i>
-                  <span style="color: black; font-weight: bold; font-size:40px; margin-left:10px; font-family: Gill Sans ">+150</span><br>
-                  <span style="color: green;font-size:17px; margin-left:4px; font-family: Gill Sans; font-weight: bold;margin-left:10px ">Delivery Realize</span>
+                     <i class="fa-solid fa-clipboard-check fa-2x text-gradient flex-shrink-0 mt-1" style="color: #E5187B; font-size:50px"></i>
+                     <span style="color: black; font-weight: bold; font-size:40px; margin-left:10px; font-family: Gill Sans ">+150</span><br>
+                     <span style="color: green;font-size:17px; margin-left:4px; font-family: Gill Sans; font-weight: bold;margin-left:10px ">Delivery Realize</span>
                   </div>
-                  
+
                </div>
             </div>
          </div>
       </div>
    </div>
-   <!-- about sectuion end -->
-   <!-- cream sectuion start -->
+   <!-- about section end -->
+   <!-- product section start -->
    <div class="cream_section layout_padding" id="flower">
       <div class="container">
          <div class="row">
             <div class="col-md-12">
-               <h1 class="cream_taital">Our Featured Ice Cream</h1>
-               <p class="cream_text">tempor incididunt ut labore et dolore magna aliqua</p>
+               <h1 class="cream_taital">Our Bouquets</h1>
+               <p class="cream_text">A bouquet of joy, crafted just for you.</p>
             </div>
          </div>
          <div class="cream_section_2">
             <div class="row">
-               <div class="col-md-4">
-                  <div class="cream_box">
-                     <div class="cream_img"><img src="images/img-1.png"></div>
-                     <div class="price_text">$10</div>
-                     <h6 class="strawberry_text">Strawberry Ice Cream</h6>
-                     <div class="cart_bt"><a href="#">Add To Cart</a></div>
+            <div class="col-md-4">
+                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
+                     <img src="images/p2_mini.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <div class="card-body d-flex flex-column justify-content-between">
+                        <h6 class="card-title fw-bold mb-2 " style="font-family: Gill Sans;font-size:17px" >Blossoms of Joy</h6>
+                        <p class="card-text text-danger fw-bold fs-5 mb-2">100DH</p>
+                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
+                     </div>
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="cream_box">
-                     <div class="cream_img"><img src="images/img-2.png"></div>
-                     <div class="price_text">$10</div>
-                     <h6 class="strawberry_text">Strawberry Ice Cream</h6>
-                     <div class="cart_bt"><a href="#">Add To Cart</a></div>
+                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
+                     <img src="images/p4_mini.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <div class="card-body d-flex flex-column justify-content-between">
+                        <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Elegance in Pink</h6>
+                        <p class="card-text text-danger fw-bold fs-5 mb-2">100DH</p>
+                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
+                     </div>
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="cream_box">
-                     <div class="cream_img"><img src="images/img-1.png"></div>
-                     <div class="price_text">$10</div>
-                     <h6 class="strawberry_text">Strawberry Ice Cream</h6>
-                     <div class="cart_bt"><a href="#">Add To Cart</a></div>
+                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
+                     <img src="images/p1_mini.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <div class="card-body d-flex flex-column justify-content-between">
+                        <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Summer Bliss Bouquet</h6>
+                        <p class="card-text text-danger fw-bold fs-5 mb-2">100DH</p>
+                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
          <div class="cream_section_2">
             <div class="row">
-               <div class="col-md-4">
-                  <div class="cream_box">
-                     <div class="cream_img"><img src="images/img-3.png"></div>
-                     <div class="price_text">$10</div>
-                     <h6 class="strawberry_text">Strawberry Ice Cream</h6>
-                     <div class="cart_bt"><a href="#">Add To Cart</a></div>
+            <div class="col-md-4">
+                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
+                     <img src="images/p3.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <div class="card-body d-flex flex-column justify-content-between">
+                        <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Sunshine Blossom Bouquet</h6>
+                        <p class="card-text text-danger fw-bold fs-5 mb-2">300DH</p>
+                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
+                     </div>
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="cream_box">
-                     <div class="cream_img"><img src="images/img-4.png"></div>
-                     <div class="price_text">$10</div>
-                     <h6 class="strawberry_text">Strawberry Ice Cream</h6>
-                     <div class="cart_bt"><a href="#">Add To Cart</a></div>
+                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
+                     <img src="images/p1.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <div class="card-body d-flex flex-column justify-content-between">
+                        <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Royal Violet Bouquet</h6>
+                        <p class="card-text text-danger fw-bold fs-5 mb-2">300DH</p>
+                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
+                     </div>
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="cream_box">
-                     <div class="cream_img"><img src="images/img-5.png"></div>
-                     <div class="price_text">$10</div>
-                     <h6 class="strawberry_text">Strawberry Ice Cream</h6>
-                     <div class="cart_bt"><a href="#">Add To Cart</a></div>
+                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
+                     <img src="images/p4.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <div class="card-body d-flex flex-column justify-content-between">
+                        <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Pretty in Pastels Bouquet</h6>
+                        <p class="card-text text-danger fw-bold fs-5 mb-2">300DH</p>
+                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -186,39 +197,42 @@
          <div class="seemore_bt"><a href="#">See More</a></div>
       </div>
    </div>
-   <!-- cream sectuion end -->
+   <!-- product section end -->
    <!-- services section start -->
    <div class="services_section layout_padding" id="event">
       <div class="container">
          <div class="row">
             <div class="col-md-12">
-               <h1 class="services_taital">Our Ice Cream Services</h1>
-               <p class="services_text">tempor incididunt ut labore et dolore magna aliqua</p>
+               <h1 class="services_taital">Events</h1>
+               <p class="services_text">The best occasions to buy flowers to your lover.</p>
             </div>
          </div>
          <div class="services_section_2">
             <div class="row">
                <div class="col-md-4">
                   <div class="services_box">
-                     <h5 class="tasty_text"><span class="icon_img"><img src="images/icon-1.png"></span>Cookies Ice Cream</h5>
-                     <p class="lorem_text">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fat </p>
+                     <h2 class="tasty_text" style="font-family: Gill Sans;font-weight: bold;"><span class="icon_img"><img src="images/heart_icon.png"></span>Valentine's Day</h2>
+                     <p class="lorem_text">Romance, joy, and surprises await in Garden Glow don’t miss our Valentine’s event!</p>
+                     <img src="images/v_event.jpg" class="img-fluid rounded mt-3" >
+                  </div>
+               </div>
+              <div class="col-md-4">
+                  <div class="services_box">
+                  <h5 class="tasty_text" style="font-family: Gill Sans;font-weight: bold;"><span class="icon_img"><img src="images/ring_icon.png"></span>Wedding</h5>
+                     <p class="lorem_text">With Garden Glow Celebrate love and unity of your wedding day don't miss out this occasion. </p>
+                     <img src="images/w_event.jpg" class="img-fluid rounded mt-3" >
+                    
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="services_box">
-                     <h5 class="tasty_text"><span class="icon_img"><img src="images/icon-2.png"></span>Cookies Ice Cream</h5>
-                     <p class="lorem_text">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fat </p>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="services_box">
-                     <h5 class="tasty_text"><span class="icon_img"><img src="images/icon-1.png"></span>Cookies Ice Cream</h5>
-                     <p class="lorem_text">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fat </p>
+                     <h5 class="tasty_text" style="font-family: Gill Sans;font-weight: bold;"><span class="icon_img"><img src="images/crown_icon.png"></span>Mother's Day</h5>
+                     <p class="lorem_text">A special day for the special women who made us who we are—Happy Mother’s Day!</p>
+                     <img src="images/m_event.jpg" class="img-fluid rounded mt-3" >
                   </div>
                </div>
             </div>
          </div>
-         <div class="seemore_bt"><a href="#">Read More</a></div>
       </div>
    </div>
    <!-- services section end -->
