@@ -28,7 +28,10 @@
    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
    <!-- Tweaks for older IEs-->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+ />
 </head>
 
 <body>
@@ -92,12 +95,24 @@
       <div class="container">
          <div class="row">
             <div class="col-md-6">
-               <div class="about_img"><img src="images/about-img.png"></div>
+               <div class="about_img"><img src="images/img_about.jpg"></div>
             </div>
             <div class="col-md-6">
                <h1 class="about_taital">About Our Shop</h1>
-               <p class="about_text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore euconsectetur adipiscing esequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-               <div class="read_bt_1"><a href="#">Read More</a></div>
+               <p class="about_text">Garden Glow is more than just a flower shop – we're passionate storytellers who believe in the power of nature's most beautiful creations. Founded by a family of flower enthusiasts, we carefully craft each bouquet with love, selecting the freshest blooms from local growers to create arrangements that speak directly to the heart. From celebrating life's joyous moments to offering comfort during challenging times, our flowers are designed to transform emotions into living, breathing art that connects people and creates memories that last far beyond the petals.</p>
+               <div class="read_bt_1 " style="display: flex; gap: 20px; align-items: center;">
+                  <div style="display: flex; align-items: center;">
+                  <i class="fa-solid fa-users fa-2x text-gradient flex-shrink-0 mt-1" style="color: #E5187B; font-size:50px"></i>
+                  <span style="color: black; font-weight: bold; font-size:40px; margin-left:10px; font-family: Gill Sans ">25</span><br>
+                  <span style="color: green;font-size:17px; margin-left:4px; font-family: Gill Sans; font-weight: bold;margin-left:10px ">Loyal Customer</span>
+                  </div>
+                  <div style="display: flex; align-items: center; margin-left:70px">
+                  <i class="fa-solid fa-clipboard-check fa-2x text-gradient flex-shrink-0 mt-1" style="color: #E5187B; font-size:50px"></i>
+                  <span style="color: black; font-weight: bold; font-size:40px; margin-left:10px; font-family: Gill Sans ">+150</span><br>
+                  <span style="color: green;font-size:17px; margin-left:4px; font-family: Gill Sans; font-weight: bold;margin-left:10px ">Delivery Realize</span>
+                  </div>
+                  
+               </div>
             </div>
          </div>
       </div>
