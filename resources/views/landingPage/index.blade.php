@@ -31,7 +31,7 @@
    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
    <style>
       .gallery img {
          width: 100%;
@@ -39,27 +39,26 @@
          object-fit: cover;
          border-radius: 10px;
       }
-   
+
       .started_text a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #E5187B;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
+         display: inline-block;
+         padding: 10px 20px;
+         background-color: #E5187B;
+         color: white;
+         text-decoration: none;
+         border-radius: 30px;
+         font-weight: bold;
+         cursor: pointer;
+         transition: all 0.3s ease;
+      }
 
-  .started_text a:hover {
-    background-color: #c01267;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(229, 24, 123, 0.3);
-  }
-
+      .started_text a:hover {
+         background-color: #c01267;
+         transform: translateY(-3px);
+         box-shadow: 0 5px 15px rgba(229, 24, 123, 0.3);
+      }
    </style>
-   
+
 </head>
 
 <body>
@@ -331,7 +330,7 @@
 
       </div>
    </div>
-  
+
    <!-- contact section start -->
    <div class="contact_section layout_padding" id="contact">
       <div class="container">
@@ -361,34 +360,31 @@
                   <ul>
                      <li>
                         <a href="#">
-                           <span class="padding_left_10 active"><i class="fa fa-map-marker" aria-hidden="true"></i></span>Making this the first true</a>
+                           <span class="padding_left_10 active"><i class="fa fa-map-marker" aria-hidden="true"></i></span>Boulvard Anfa Casablanca</a>
                      </li>
                      <li>
                         <a href="#">
-                           <span class="padding_left_10"><i class="fa fa-phone" aria-hidden="true"></i></span>Call : +01 1234567890
+                           <span class="padding_left_10"><i class="fa fa-phone" aria-hidden="true"></i></span>Call : +212 678894556
                         </a>
                      </li>
                      <li>
                         <a href="#">
-                           <span class="padding_left_10"><i class="fa fa-envelope" aria-hidden="true"></i></span>Email : demo@gmail.com
+                           <span class="padding_left_10"><i class="fa fa-envelope" aria-hidden="true"></i></span>Email : gardenglow@gmail.com
                         </a>
                      </li>
                   </ul>
                </div>
-               <div class="mail_main">
-                  <h3 class="newsletter_text">Newsletter</h3>
-                  <div class="form-group">
-                     <textarea class="update_mail" placeholder="Enter Your Email" rows="5" id="comment" name="Enter Your Email"></textarea>
-                     <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-                  </div>
-               </div>
+
                <div class="footer_social_icon">
                   <ul>
-                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                     <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                   </ul>
+               </div>
+               <div>
+                  <img src="images/contact_img.png" style="margin-left: 500px; " alt="">
                </div>
             </div>
          </div>
@@ -406,36 +402,6 @@
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   <script>
-      // Add this script at the end of your body, just before the closing </body> tag
-document.addEventListener('DOMContentLoaded', function() {
-  // Fix for smooth scrolling to sections
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 100, // Offset to account for fixed navbar
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-
-  // Make sure the "Browse Flowers" button is clickable
-  const browseButton = document.querySelector('.started_text a');
-  if (browseButton) {
-    browseButton.style.cursor = 'pointer';
-    browseButton.style.display = 'inline-block';
-    browseButton.style.textDecoration = 'none';
-  }
-});
-   </script>
-
    <!-- javascript -->
 </body>
 

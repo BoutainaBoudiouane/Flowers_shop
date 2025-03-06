@@ -796,7 +796,7 @@ button {
     width: 100%;
     float: left;
     background-color: #262526;
-    height: auto;
+    height: 720px;
     padding: 90px 0px;
 }
 
@@ -920,6 +920,8 @@ textarea#comment::placeholder {
     float: right;
     padding-top: 20px;
     text-align: right;
+    margin-right: 510px;
+    margin-top: 50px;
 }
 
 .footer_social_icon ul {
