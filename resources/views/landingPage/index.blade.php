@@ -31,10 +31,38 @@
    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+      .gallery img {
+         width: 100%;
+         height: auto;
+         object-fit: cover;
+         border-radius: 10px;
+      }
+   
+      .started_text a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E5187B;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .started_text a:hover {
+    background-color: #c01267;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(229, 24, 123, 0.3);
+  }
+
+   </style>
+   
 </head>
 
 <body>
-
    <div class="container ">
       <nav class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top w-75 mx-auto">
          <a class="navbar-brand" href="#home"><img src="images/logo_app.png"></a>
@@ -128,11 +156,11 @@
          </div>
          <div class="cream_section_2">
             <div class="row">
-            <div class="col-md-4">
+               <div class="col-md-4">
                   <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p2_mini.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <img src="images/p2_mini.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
                      <div class="card-body d-flex flex-column justify-content-between">
-                        <h6 class="card-title fw-bold mb-2 " style="font-family: Gill Sans;font-size:17px" >Blossoms of Joy</h6>
+                        <h6 class="card-title fw-bold mb-2 " style="font-family: Gill Sans;font-size:17px">Blossoms of Joy</h6>
                         <p class="card-text text-danger fw-bold fs-5 mb-2">100DH</p>
                         <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
                      </div>
@@ -140,7 +168,7 @@
                </div>
                <div class="col-md-4">
                   <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p4_mini.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <img src="images/p4_mini.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
                      <div class="card-body d-flex flex-column justify-content-between">
                         <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Elegance in Pink</h6>
                         <p class="card-text text-danger fw-bold fs-5 mb-2">100DH</p>
@@ -150,7 +178,7 @@
                </div>
                <div class="col-md-4">
                   <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p1_mini.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <img src="images/p1_mini.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
                      <div class="card-body d-flex flex-column justify-content-between">
                         <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Summer Bliss Bouquet</h6>
                         <p class="card-text text-danger fw-bold fs-5 mb-2">100DH</p>
@@ -162,9 +190,9 @@
          </div>
          <div class="cream_section_2">
             <div class="row">
-            <div class="col-md-4">
+               <div class="col-md-4">
                   <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p3.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <img src="images/p3.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
                      <div class="card-body d-flex flex-column justify-content-between">
                         <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Sunshine Blossom Bouquet</h6>
                         <p class="card-text text-danger fw-bold fs-5 mb-2">300DH</p>
@@ -174,7 +202,7 @@
                </div>
                <div class="col-md-4">
                   <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p1.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <img src="images/p1.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
                      <div class="card-body d-flex flex-column justify-content-between">
                         <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Royal Violet Bouquet</h6>
                         <p class="card-text text-danger fw-bold fs-5 mb-2">300DH</p>
@@ -184,7 +212,7 @@
                </div>
                <div class="col-md-4">
                   <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p4.png" class="card-img-top p-3"  style="height: 350px; object-fit: contain;">
+                     <img src="images/p4.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
                      <div class="card-body d-flex flex-column justify-content-between">
                         <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Pretty in Pastels Bouquet</h6>
                         <p class="card-text text-danger fw-bold fs-5 mb-2">300DH</p>
@@ -213,22 +241,22 @@
                   <div class="services_box">
                      <h2 class="tasty_text" style="font-family: Gill Sans;font-weight: bold;"><span class="icon_img"><img src="images/heart_icon.png"></span>Valentine's Day</h2>
                      <p class="lorem_text">Romance, joy, and surprises await in Garden Glow don’t miss our Valentine’s event!</p>
-                     <img src="images/v_event.jpg" class="img-fluid rounded mt-3" >
+                     <img src="images/v_event.jpg" class="img-fluid rounded mt-3">
                   </div>
                </div>
-              <div class="col-md-4">
+               <div class="col-md-4">
                   <div class="services_box">
-                  <h5 class="tasty_text" style="font-family: Gill Sans;font-weight: bold;"><span class="icon_img"><img src="images/ring_icon.png"></span>Wedding</h5>
+                     <h5 class="tasty_text" style="font-family: Gill Sans;font-weight: bold;"><span class="icon_img"><img src="images/ring_icon.png"></span>Wedding</h5>
                      <p class="lorem_text">With Garden Glow Celebrate love and unity of your wedding day don't miss out this occasion. </p>
-                     <img src="images/w_event.jpg" class="img-fluid rounded mt-3" >
-                    
+                     <img src="images/w_event.jpg" class="img-fluid rounded mt-3">
+
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="services_box">
                      <h5 class="tasty_text" style="font-family: Gill Sans;font-weight: bold;"><span class="icon_img"><img src="images/crown_icon.png"></span>Mother's Day</h5>
                      <p class="lorem_text">A special day for the special women who made us who we are—Happy Mother’s Day!</p>
-                     <img src="images/m_event.jpg" class="img-fluid rounded mt-3" >
+                     <img src="images/m_event.jpg" class="img-fluid rounded mt-3">
                   </div>
                </div>
             </div>
@@ -251,19 +279,19 @@
                      <div id="main_slider" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                            <div class="carousel-item active">
-                              <p class="testimonial_text">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
-                              <h4 class="client_name">Marri Fen</h4>
-                              <div class="client_img"><img src="images/client-img.png"></div>
+                              <p class="testimonial_text">Fast delivery and excellent customer service! I needed a last-minute bouquet for a special occasion, and they made it happen effortlessly. So grateful!</p>
+                              <h4 class="client_name">Mahmoud</h4>
+
                            </div>
                            <div class="carousel-item">
-                              <p class="testimonial_text">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
-                              <h4 class="client_name">Marri Fen</h4>
-                              <div class="client_img"><img src="images/client-img.png"></div>
+                              <p class="testimonial_text">Absolutely stunning flowers! I ordered a bouquet for my mom's birthday, and she was overjoyed. Fresh, vibrant, and delivered right on time. Highly recommend!</p>
+                              <h4 class="client_name">Fatima</h4>
+
                            </div>
                            <div class="carousel-item">
-                              <p class="testimonial_text">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
-                              <h4 class="client_name">Marri Fen</h4>
-                              <div class="client_img"><img src="images/client-img.png"></div>
+                              <p class="testimonial_text">I ordered roses for my anniversary, and they were perfect. The arrangement was elegant, and the flowers lasted longer than I expected. Thank you for the amazing service</p>
+                              <h4 class="client_name">Mohamed</h4>
+
                            </div>
                         </div>
                         <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
@@ -280,13 +308,37 @@
       </div>
    </div>
    <!-- testimonial section end -->
+   <div class=" mt-6">
+      <div class="row g-1 gallery">
+         <div class="col-12 col-sm-6 col-md-2">
+            <img src="images/gal_1.jpg" class="img-fluid rounded" alt="Image 1">
+         </div>
+         <div class="col-12 col-sm-6 col-md-2">
+            <img src="images/gal_2.jpg" class="img-fluid rounded" alt="Image 2">
+         </div>
+         <div class="col-12 col-sm-6 col-md-2">
+            <img src="images/gal_3.jpg" class="img-fluid rounded" alt="Image 3">
+         </div>
+         <div class="col-12 col-sm-6 col-md-2">
+            <img src="images/gal_4.jpg" class="img-fluid rounded" alt="Image 4">
+         </div>
+         <div class="col-12 col-sm-6 col-md-2">
+            <img src="images/gal_6.jpg" class="img-fluid rounded" alt="Image 5">
+         </div>
+         <div class="col-12 col-sm-6 col-md-2">
+            <img src="images/gal_5.jpg" class="img-fluid rounded" alt="Image 6">
+         </div>
+
+      </div>
+   </div>
+  
    <!-- contact section start -->
    <div class="contact_section layout_padding" id="contact">
       <div class="container">
          <div class="row">
             <div class="col-md-4">
                <div class="contact_main">
-                  <h1 class="contact_taital">Contact Us</h1>
+                  <h1 class="contact_taital">Add Testimonial</h1>
                   <form action="/action_page.php">
                      <div class="form-group">
                         <input type="text" class="email-bt" placeholder="Name" name="Name">
@@ -295,10 +347,10 @@
                         <input type="text" class="email-bt" placeholder="Email" name="Name">
                      </div>
                      <div class="form-group">
-                        <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
+                        <input type="text" class="email-bt" placeholder="Phone Number" name="Email">
                      </div>
                      <div class="form-group">
-                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                        <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Massage"></textarea>
                      </div>
                   </form>
                   <div class="main_bt"><a href="#">SEND</a></div>
@@ -353,6 +405,37 @@
    <!-- sidebar -->
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+      // Add this script at the end of your body, just before the closing </body> tag
+document.addEventListener('DOMContentLoaded', function() {
+  // Fix for smooth scrolling to sections
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100, // Offset to account for fixed navbar
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Make sure the "Browse Flowers" button is clickable
+  const browseButton = document.querySelector('.started_text a');
+  if (browseButton) {
+    browseButton.style.cursor = 'pointer';
+    browseButton.style.display = 'inline-block';
+    browseButton.style.textDecoration = 'none';
+  }
+});
+   </script>
+
    <!-- javascript -->
 </body>
 
