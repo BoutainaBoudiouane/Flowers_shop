@@ -10,7 +10,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Romyk</title>
+   <title>Garden Glow</title>
+   <link rel="icon" type="image/png" href="images/logo_onglet.png">
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -86,7 +87,7 @@
                   <a class="nav-link" href="#testimonial">Testimonial</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contact Us</a>
+                  <a class="nav-link" href="#contact">Contact</a>
                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -284,7 +285,7 @@
                            </div>
                            <div class="carousel-item">
                               <p class="testimonial_text">Absolutely stunning flowers! I ordered a bouquet for my mom's birthday, and she was overjoyed. Fresh, vibrant, and delivered right on time. Highly recommend!</p>
-                              <h4 class="client_name">Fatima</h4>
+                              <h4 class="client_name">Ghita</h4>
 
                            </div>
                            <div class="carousel-item">
