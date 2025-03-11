@@ -67,10 +67,9 @@
         <div class="sidebar-wrapper scrollbar scrollbar-inner">
           <div class="sidebar-content">
             <ul class="nav nav-secondary">
-              <li class="nav-item active">
+              <li class="nav-item ">
                 <a
-                  data-bs-toggle="collapse"
-                  href="#dashboard"
+                  href="{{ route('dashboard') }}"
                   class="collapsed"
                   aria-expanded="false"
                 >
@@ -81,8 +80,7 @@
 
               <li class="nav-item">
                 <a
-                  data-bs-toggle="collapse"
-                  href="#dashboard"
+                  href="{{ route('flower') }}"
                   class="collapsed"
                   aria-expanded="false"
                 >
@@ -92,8 +90,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  data-bs-toggle="collapse"
-                  href="#dashboard"
+                  href="{{ route('orders') }}"
                   class="collapsed"
                   aria-expanded="false"
                 >
@@ -103,8 +100,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  data-bs-toggle="collapse"
-                  href="#dashboard"
+                  href="{{ route('employees') }}"
                   class="collapsed"
                   aria-expanded="false"
                 >
@@ -114,8 +110,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  data-bs-toggle="collapse"
-                  href="#dashboard"
+                  href="{{ route('testimonials') }}"
                   class="collapsed"
                   aria-expanded="false"
                 >
