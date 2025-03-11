@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\dashboard\FlowerController;
+use App\Http\Controllers\FlowerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +24,11 @@ Route::get('/dashboard', function () {
 })->name('dashboard');
 
 //Flower section
-Route::get('/flowers',[FlowerController::class, 'index'] )->name('flower');
-Route::post('/flowers',[FlowerController::class, 'store'] );
-
+Route::get('/flowers',[FlowerController::class, 'index'])->name('flower');
+Route::post('/flowers',[FlowerController::class, 'store'])->name('flower.store');
+Route::get('/flowers/{flower}/edit', [FlowerController::class, 'edit'])->name('flower.edit');
+Route::put('/flowers/{flower}', [FlowerController::class, 'update'])->name('flower.update');
+Route::delete('/flowers/{flower}', [FlowerController::class, 'destroy'])->name('flower.destroy');
 
 
 
