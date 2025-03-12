@@ -48,13 +48,6 @@ class FlowerController extends Controller
         return redirect()->back()->with('success', 'Flower added successfully!');
     }
 
-    public function edit($id)
-    {
-
-        $flower = Flower::findOrFail($id);
-        return $flower;
-    }
-
     public function update(Request $request, $id)
     {
         // Find the flower

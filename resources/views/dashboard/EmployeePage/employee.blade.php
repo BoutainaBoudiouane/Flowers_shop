@@ -220,7 +220,7 @@
                     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
                         <div>
                             <button class="btn btn-primary btn-lg shadow-lg px-4 py-2 rounded-pill fw-bold text-uppercase animateanimated animatepulse"
-                                data-bs-toggle="modal" data-bs-target="#addProductModal">
+                                data-bs-toggle="modal" data-bs-target="#addEmployeeModal">
                                 Add Employee
                             </button>
                         </div>
@@ -277,7 +277,9 @@
                                                                 title=""
                                                                 class="btn btn-link btn-primary btn-lg"
                                                                 data-original-title="Edit Task"
-                                                                data-bs-toggle="modal">
+                                                                data-bs-toggle="modal"
+                                                                 data-bs-target="#editEmployeeModal{{ $employee->id }}"
+                                                                >
                                                                 <i class="fa fa-edit"></i>
                                                             </button>
                                                             <button
@@ -311,7 +313,11 @@
         </div>
 
         <!--  add model-->
+
+        @include('dashboard.EmployeePage.addEmployee')
+
         @foreach($employees as $employee)
+        @include('dashboard.EmployeePage.updateEmployee', ['employee' => $employee])
     @include('dashboard.EmployeePage.deleteEmployee', ['employee' => $employee])
    
 @endforeach

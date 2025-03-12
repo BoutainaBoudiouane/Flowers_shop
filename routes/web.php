@@ -30,14 +30,16 @@ Route::get('/dashboard', function () {
 //Flower section
 Route::get('/flowers',[FlowerController::class, 'index'])->name('flower');
 Route::post('/flowers',[FlowerController::class, 'store'])->name('flower.store');
-Route::get('/flowers/{flower}/edit', [FlowerController::class, 'edit'])->name('flower.edit');
 Route::put('/flowers/{flower}', [FlowerController::class, 'update'])->name('flower.update');
 Route::delete('/flowers/{flower}', [FlowerController::class, 'destroy'])->name('flower.destroy');
 
 
 //Employee section
 Route::get('/employees',[EmployeeController::class, 'index'])->name('employee');
+Route::post('/employees',[EmployeeController::class, 'store'])->name('employee.store');
+Route::put('/employees/{employee}', [EmployeeController::class, 'update'])->name('employee.update');
 Route::delete('/employees/{employee}', [EmployeeController::class, 'destroy'])->name('employee.destroy');
+
 
 
 
