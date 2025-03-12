@@ -15,4 +15,20 @@ class EmployeeController extends Controller
 
         return view('dashboard.EmployeePage.employee', compact('employees'));
     }
+    //add
+
+    //edit
+
+    //update
+
+
+    //delete
+    public function destroy($id)
+    {
+        
+        $employee = Employee::findOrFail($id);
+        $employee->delete();
+
+        return redirect()->back()->with('success', 'Employee deleted successfully!');
+    }
 }

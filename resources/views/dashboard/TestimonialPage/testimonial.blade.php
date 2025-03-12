@@ -252,15 +252,6 @@
                                                     <td>{{ $testimonial->message }}</td>
                                                     <td>
                                                         <div class="form-button-action">
-                                                        <button
-                                                                type="button"
-                                                                title=""
-                                                                class="btn btn-link btn-primary btn-lg"
-                                                                data-original-title="Edit Task"
-                                                                data-bs-toggle="modal"
-                                                                >
-                                                                <i class="fa fa-edit"></i>
-                                                            </button>
                                                             <button
                                                                 type="button"
 

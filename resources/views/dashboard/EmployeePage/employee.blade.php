@@ -246,8 +246,6 @@
                                                     <th>Date Fin</th>
                                                     <th>Post</th>
                                                     <th>Action</th>
-
-
                                                 </tr>
                                             </thead>
                                             <tfoot>
@@ -259,7 +257,6 @@
                                                     <th>Date Debut</th>
                                                     <th>Date Fin</th>
                                                     <th>Post</th>
-
                                                 </tr>
                                             </tfoot>
 
@@ -290,6 +287,7 @@
                                                                 class="btn btn-link btn-danger"
                                                                 data-original-title="Remove"
                                                                 data-bs-toggle="modal" 
+                                                                 data-bs-target="#deleteEmployeeModal{{ $employee->id }}"
                                                                 >
                                                                 <i class=" fa fa-times"></i>
                                                             </button>
@@ -313,7 +311,10 @@
         </div>
 
         <!--  add model-->
-
+        @foreach($employees as $employee)
+    @include('dashboard.EmployeePage.deleteEmployee', ['employee' => $employee])
+   
+@endforeach
 
         <!--   Core JS Files   -->
         <script src="assets/js/core/jquery-3.7.1.min.js"></script>

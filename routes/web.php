@@ -37,6 +37,7 @@ Route::delete('/flowers/{flower}', [FlowerController::class, 'destroy'])->name('
 
 //Employee section
 Route::get('/employees',[EmployeeController::class, 'index'])->name('employee');
+Route::delete('/employees/{employee}', [EmployeeController::class, 'destroy'])->name('employee.destroy');
 
 
 
