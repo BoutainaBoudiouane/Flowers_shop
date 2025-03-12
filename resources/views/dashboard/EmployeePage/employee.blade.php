@@ -221,7 +221,7 @@
                         <div>
                             <button class="btn btn-primary btn-lg shadow-lg px-4 py-2 rounded-pill fw-bold text-uppercase animateanimated animatepulse"
                                 data-bs-toggle="modal" data-bs-target="#addProductModal">
-                                Add Flower
+                                Add Employee
                             </button>
                         </div>
                     </div>
@@ -229,7 +229,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Flowers</h4>
+                                    <h4 class="card-title">Employees</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -239,32 +239,40 @@
                                             <thead>
                                                 <tr>
                                                     <th>Name</th>
-                                                    <th>Description</th>
-                                                    <th>Price</th>
-                                                    <th>Type</th>
-                                                    <th>Image</th>
+                                                    <th>CIN</th>
+                                                    <th>Gender</th>
+                                                    <th>Adresse</th>
+                                                    <th>Date Debut</th>
+                                                    <th>Date Fin</th>
+                                                    <th>Post</th>
                                                     <th>Action</th>
+
+
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
                                                     <th>Name</th>
-                                                    <th>Description</th>
-                                                    <th>Price</th>
-
-                                                    <th>Type</th>
+                                                    <th>CIN</th>
+                                                    <th>Gender</th>
+                                                    <th>Adresse</th>
+                                                    <th>Date Debut</th>
+                                                    <th>Date Fin</th>
+                                                    <th>Post</th>
 
                                                 </tr>
                                             </tfoot>
 
                                             <tbody>
-                                                @foreach ($flowers as $flower)
+                                                @foreach ($employees as $employee)
                                                 <tr>
-                                                    <td>{{ $flower->name }}</td>
-                                                    <td>{{ $flower->description }}</td>
-                                                    <td>${{ number_format($flower->price, 2) }}</td>
-                                                    <td>{{ $flower->type }}</td>
-                                                    <td><img src="{{ $flower->image }}" style="height:50px; width:50px" alt=""></td>
+                                                    <td>{{ $employee->name }}</td>
+                                                    <td>{{ $employee->cin }}</td>
+                                                    <td>{{ $employee->gender }}</td>
+                                                    <td>{{ $employee->adresse }}</td>
+                                                    <td>{{ $employee->date_debut }}</td>
+                                                    <td>{{ $employee->date_fin }}</td>
+                                                    <td>{{ $employee->post }}</td>
                                                     <td>
                                                         <div class="form-button-action">
                                                             <button
@@ -272,20 +280,18 @@
                                                                 title=""
                                                                 class="btn btn-link btn-primary btn-lg"
                                                                 data-original-title="Edit Task"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#editFlowerModal{{ $flower->id }}">
+                                                                data-bs-toggle="modal">
                                                                 <i class="fa fa-edit"></i>
                                                             </button>
                                                             <button
                                                                 type="button"
-                                                               
+
                                                                 title=""
                                                                 class="btn btn-link btn-danger"
                                                                 data-original-title="Remove"
-                                                                 data-bs-toggle="modal"
-                                                                data-bs-target="#deleteFlowerModal{{ $flower->id }}"
+                                                                data-bs-toggle="modal" 
                                                                 >
-                                                                <i class="fa fa-times"></i>
+                                                                <i class=" fa fa-times"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -301,36 +307,13 @@
                             </div>
                         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </div>
                 </div>
             </div>
         </div>
 
         <!--  add model-->
-        @include('dashboard.FlowerPage.addFlower')
 
-       
-        @foreach($flowers as $flower)
-    @include('dashboard.FlowerPage.updateFlower', ['flower' => $flower])
-    @include('dashboard.FlowerPage.deleteFlower', ['flower' => $flower])
-   
-@endforeach
 
         <!--   Core JS Files   -->
         <script src="assets/js/core/jquery-3.7.1.min.js"></script>

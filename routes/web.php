@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlowerController;
+use App\Http\Controllers\EmployeeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +33,21 @@ Route::put('/flowers/{flower}', [FlowerController::class, 'update'])->name('flow
 Route::delete('/flowers/{flower}', [FlowerController::class, 'destroy'])->name('flower.destroy');
 
 
+//Employee section
+Route::get('/employees',[EmployeeController::class, 'index'])->name('employee');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -38,14 +55,9 @@ Route::delete('/flowers/{flower}', [FlowerController::class, 'destroy'])->name('
 
 
 //Order section
-Route::get('/orders', function () {
-    return view('dashboard.FlowerPage.flower');
-})->name('orders');
+Route::get('/orders', [FlowerController::class, 'index'])->name('orders');
 
-//Employee section
-Route::get('/employees', function () {
-    return view('dashboard.FlowerPage.flower');
-})->name('employees');
+
 
 //Testimonial section
 Route::get('/testimonials', function () {
