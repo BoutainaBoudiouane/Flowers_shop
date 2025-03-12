@@ -218,13 +218,19 @@
             <div class="container">
                 <div class="page-inner">
                     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
-                  
+                        <div>
+                            <button class="btn btn-primary btn-lg shadow-lg px-4 py-2 rounded-pill fw-bold text-uppercase animateanimated animatepulse"
+                                data-bs-toggle="modal"
+                                data-bs-target="#addOrderModal">
+                                Add Order
+                            </button>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Testimonials</h4>
+                                    <h4 class="card-title">Orders</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -233,33 +239,56 @@
                                             class="display table  table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>email</th>
-                                                    <th>Phone Number</th>
-                                                    <th>message</th>
+                                                    <th>ORDER id</th>
+                                                    <th>Flower name</th>
+                                                    <th>quantity</th>
+                                                    <th>total price</th>
+                                                    <th>status</th>
+                                                    <th>Type</th>
                                                     <th>Action</th>
-
-
                                                 </tr>
                                             </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>ORDER id</th>
+                                                    <th>Flower name</th>
+                                                    <th>quantity</th>
+                                                    <th>total price</th>
+                                                    <th>status</th>
+                                                    <th>Type</th>
+                                                </tr>
+                                            </tfoot>
 
                                             <tbody>
-                                                @foreach ($testimonials as $testimonial)
+                                                @foreach ($orders as $order)
                                                 <tr>
-                                                    <td>{{ $testimonial->name }}</td>
-                                                    <td>{{ $testimonial->email }}</td>
-                                                    <td>{{ $testimonial->phone_number }}</td>
-                                                    <td>{{ $testimonial->message }}</td>
+                                                    <td>{{ $order->id }}</td>
+                                                    <td>{{ $order->flower->name }}</td>
+                                                    <td>{{ $order->quantity }}</td>
+                                                    <td>{{ $order->total_price }} DH</td>
+                                                    <td>{{ $order->status }}</td>
+                                                    <td>{{ $order->type }}</td>
+
                                                     <td>
                                                         <div class="form-button-action">
+                                                            <button
+                                                                type="button"
+                                                                title=""
+                                                                class="btn btn-link btn-primary btn-lg"
+                                                                data-original-title="Edit Task"
+                                                                data-bs-toggle="modal"
+                                                                 data-bs-target="#editOrderModal{{ $order->id }}">
+                                                                <i class="fa fa-edit"></i>
+                                                            </button>
                                                             <button
                                                                 type="button"
 
                                                                 title=""
                                                                 class="btn btn-link btn-danger"
                                                                 data-original-title="Remove"
-                                                                data-bs-toggle="modal" 
-                                                                 data-bs-target="#deleteTestimonialModal{{ $testimonial->id }}">
+                                                                data-bs-toggle="modal"
+                                                                 data-bs-target="#deleteOrderModal{{ $order->id }}"
+                                                                >
                                                                 <i class=" fa fa-times"></i>
                                                             </button>
                                                         </div>
@@ -283,10 +312,16 @@
 
         <!--  add model-->
 
-        @foreach($testimonials as $testimonial)
-    @include('dashboard.TestimonialPage.deleteTestimonial', ['testimonial' => $testimonial])
-   
+     
+        @include('dashboard.OrderPage.addOrder', ['flowers' => $flowers])
+
+        @foreach($orders as $order)
+        @include('dashboard.OrderPage.updateOrder', ['order' => $order, 'flowers' => $flowers])
+        @include('dashboard.OrderPage.deleteOrder', ['order' => $order])
+    
 @endforeach
+
+
         <!--   Core JS Files   -->
         <script src="assets/js/core/jquery-3.7.1.min.js"></script>
         <script src="assets/js/core/popper.min.js"></script>

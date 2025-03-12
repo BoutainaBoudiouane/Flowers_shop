@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlowerController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TestimonialController;
 
 
@@ -34,6 +35,15 @@ Route::put('/flowers/{flower}', [FlowerController::class, 'update'])->name('flow
 Route::delete('/flowers/{flower}', [FlowerController::class, 'destroy'])->name('flower.destroy');
 
 
+//Order section
+Route::get('/orders', [OrderController::class, 'index'])->name('order');
+Route::post('/orders',[OrderController::class, 'store'])->name('order.store');
+Route::put('/orders/{order}', [OrderController::class, 'update'])->name('order.update');
+Route::delete('/orders/{order}', [OrderController::class, 'destroy'])->name('order.destroy');
+
+
+
+
 //Employee section
 Route::get('/employees',[EmployeeController::class, 'index'])->name('employee');
 Route::post('/employees',[EmployeeController::class, 'store'])->name('employee.store');
@@ -41,18 +51,11 @@ Route::put('/employees/{employee}', [EmployeeController::class, 'update'])->name
 Route::delete('/employees/{employee}', [EmployeeController::class, 'destroy'])->name('employee.destroy');
 
 
-
-
 //Testimonial section
 Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonial');
 Route::delete('/testimonials/{testimonial}', [TestimonialController::class, 'destroy'])->name('testimonial.destroy');
 
 
-
-
-
-//Order section
-Route::get('/orders', [FlowerController::class, 'index'])->name('orders');
 
 
 

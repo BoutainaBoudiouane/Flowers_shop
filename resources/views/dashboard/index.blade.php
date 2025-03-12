@@ -90,7 +90,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="{{ route('orders') }}"
+                  href="{{ route('order') }}"
                   class="collapsed"
                   aria-expanded="false"
                 >

@@ -91,7 +91,7 @@
                         </li>
                         <li class="nav-item">
                             <a
-                                href="{{ route('orders') }}"
+                                href="{{ route('order') }}"
                                 class="collapsed"
                                 aria-expanded="false">
                                 <i class="fas fa-cube"></i>
@@ -251,7 +251,6 @@
                                                     <th>Name</th>
                                                     <th>Description</th>
                                                     <th>Price</th>
-
                                                     <th>Type</th>
 
                                                 </tr>
@@ -262,7 +261,7 @@
                                                 <tr>
                                                     <td>{{ $flower->name }}</td>
                                                     <td>{{ $flower->description }}</td>
-                                                    <td>${{ number_format($flower->price, 2) }}</td>
+                                                    <td>{{ number_format($flower->price, 2) }} DH</td>
                                                     <td>{{ $flower->type }}</td>
                                                     <td><img src="{{ $flower->image }}" style="height:50px; width:50px" alt=""></td>
                                                     <td>
