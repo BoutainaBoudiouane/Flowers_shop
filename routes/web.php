@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlowerController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\TestimonialController;
+
 
 
 /*
@@ -38,17 +40,9 @@ Route::get('/employees',[EmployeeController::class, 'index'])->name('employee');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+//Testimonial section
+Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonial');
+Route::delete('/testimonials/{testimonial}', [TestimonialController::class, 'destroy'])->name('testimonial.destroy');
 
 
 
@@ -59,7 +53,3 @@ Route::get('/orders', [FlowerController::class, 'index'])->name('orders');
 
 
 
-//Testimonial section
-Route::get('/testimonials', function () {
-    return view('dashboard.FlowerPage.flower');
-})->name('testimonials');

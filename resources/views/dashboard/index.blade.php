@@ -110,7 +110,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="{{ route('testimonials') }}"
+                  href="{{ route('testimonial') }}"
                   class="collapsed"
                   aria-expanded="false"
                 >

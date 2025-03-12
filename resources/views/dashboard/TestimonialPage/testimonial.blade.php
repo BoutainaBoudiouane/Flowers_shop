@@ -218,18 +218,13 @@
             <div class="container">
                 <div class="page-inner">
                     <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
-                        <div>
-                            <button class="btn btn-primary btn-lg shadow-lg px-4 py-2 rounded-pill fw-bold text-uppercase animateanimated animatepulse"
-                                data-bs-toggle="modal" data-bs-target="#addProductModal">
-                                Add Flower
-                            </button>
-                        </div>
+                  
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Flowers</h4>
+                                    <h4 class="card-title">Testimonials</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -239,53 +234,42 @@
                                             <thead>
                                                 <tr>
                                                     <th>Name</th>
-                                                    <th>Description</th>
-                                                    <th>Price</th>
-                                                    <th>Type</th>
-                                                    <th>Image</th>
+                                                    <th>email</th>
+                                                    <th>Phone Number</th>
+                                                    <th>message</th>
                                                     <th>Action</th>
+
+
                                                 </tr>
                                             </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Description</th>
-                                                    <th>Price</th>
-
-                                                    <th>Type</th>
-
-                                                </tr>
-                                            </tfoot>
 
                                             <tbody>
-                                                @foreach ($flowers as $flower)
+                                                @foreach ($testimonials as $testimonial)
                                                 <tr>
-                                                    <td>{{ $flower->name }}</td>
-                                                    <td>{{ $flower->description }}</td>
-                                                    <td>${{ number_format($flower->price, 2) }}</td>
-                                                    <td>{{ $flower->type }}</td>
-                                                    <td><img src="{{ $flower->image }}" style="height:50px; width:50px" alt=""></td>
+                                                    <td>{{ $testimonial->name }}</td>
+                                                    <td>{{ $testimonial->email }}</td>
+                                                    <td>{{ $testimonial->phone_number }}</td>
+                                                    <td>{{ $testimonial->message }}</td>
                                                     <td>
                                                         <div class="form-button-action">
-                                                            <button
+                                                        <button
                                                                 type="button"
                                                                 title=""
                                                                 class="btn btn-link btn-primary btn-lg"
                                                                 data-original-title="Edit Task"
                                                                 data-bs-toggle="modal"
-                                                                data-bs-target="#editFlowerModal{{ $flower->id }}">
+                                                                >
                                                                 <i class="fa fa-edit"></i>
                                                             </button>
                                                             <button
                                                                 type="button"
-                                                               
+
                                                                 title=""
                                                                 class="btn btn-link btn-danger"
                                                                 data-original-title="Remove"
-                                                                 data-bs-toggle="modal"
-                                                                data-bs-target="#deleteFlowerModal{{ $flower->id }}"
-                                                                >
-                                                                <i class="fa fa-times"></i>
+                                                                data-bs-toggle="modal" 
+                                                                 data-bs-target="#deleteTestimonialModal{{ $testimonial->id }}">
+                                                                <i class=" fa fa-times"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -301,37 +285,17 @@
                             </div>
                         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </div>
                 </div>
             </div>
         </div>
 
         <!--  add model-->
-        @include('dashboard.FlowerPage.addFlower')
 
-       
-        @foreach($flowers as $flower)
-    @include('dashboard.FlowerPage.updateFlower', ['flower' => $flower])
-    @include('dashboard.FlowerPage.deleteFlower', ['flower' => $flower])
+        @foreach($testimonials as $testimonial)
+    @include('dashboard.TestimonialPage.deleteTestimonial', ['testimonial' => $testimonial])
    
 @endforeach
-
         <!--   Core JS Files   -->
         <script src="assets/js/core/jquery-3.7.1.min.js"></script>
         <script src="assets/js/core/popper.min.js"></script>
