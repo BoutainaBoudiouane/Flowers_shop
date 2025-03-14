@@ -245,7 +245,7 @@
                       <div class="col-7 col-stats">
                         <div class="numbers">
                           <p class="card-category">Stock</p>
-                          <h4 class="card-title">150GB</h4>
+                          <h4 class="card-title">{{$flowerscount}}</h4>
                         </div>
                       </div>
                     </div>
@@ -264,7 +264,7 @@
                       <div class="col-7 col-stats">
                         <div class="numbers">
                           <p class="card-category">Orders</p>
-                          <h4 class="card-title">$ 1,345</h4>
+                          <h4 class="card-title">{{$orderscount}}</h4>
                         </div>
                       </div>
                     </div>
@@ -283,7 +283,7 @@
                       <div class="col-7 col-stats">
                         <div class="numbers">
                           <p class="card-category">Employees</p>
-                          <h4 class="card-title">23</h4>
+                          <h4 class="card-title">{{$employeescount}}</h4>
                         </div>
                       </div>
                     </div>
@@ -302,7 +302,7 @@
                       <div class="col-7 col-stats">
                         <div class="numbers">
                           <p class="card-category">Testimonials</p>
-                          <h4 class="card-title">+45K</h4>
+                          <h4 class="card-title">{{$testimonialscount}}</h4>
                         </div>
                       </div>
                     </div>
@@ -314,7 +314,7 @@
               <div class="col-md-8">
               <div class="card">
                   <div class="card-header">
-                    <div class="card-title">Bar Chart</div>
+                    <div class="card-title">Flower Chart</div>
                   </div>
                   <div class="card-body">
                     <div class="chart-container">
@@ -371,25 +371,26 @@
         type: "bar",
         data: {
           labels: [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
+            "mini_bouquet",
+            "large_bouquet",
+            "valentine",
+            "wedding",
+            "mother",
+            "women",
           ],
           datasets: [
             {
-              label: "Sales",
-              backgroundColor: "rgb(23, 125, 255)",
-              borderColor: "rgb(23, 125, 255)",
-              data: [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4],
+              label: "Quantity",
+              backgroundColor: "rgb(243, 104, 150)",
+              borderColor: "rgb(243, 104, 150)",
+              data: [
+                            {{ $miniflower }},
+                            {{ $largeflower }},
+                            {{ $valentineflower }},
+                            {{ $weddingflower }},
+                            {{ $motherflower }},
+                            {{ $womenflower }}
+                        ],
             },
           ],
         },

@@ -5,6 +5,8 @@ use App\Http\Controllers\FlowerController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\DashboardController;
+
 
 
 
@@ -24,9 +26,7 @@ Route::get('/', function () {
 });
 
 //dashboard
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-})->name('dashboard');
+Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
 
 //Flower section
 Route::get('/flowers',[FlowerController::class, 'index'])->name('flower');
