@@ -90,9 +90,11 @@
                   <a class="nav-link" href="#contact">Contact</a>
                </li>
             </ul>
+            @guest
             <form class="form-inline my-2 my-lg-0">
-               <div class="login_bt"><a href="#">Login <span style="color: #222222;"><i class="fa fa-user" aria-hidden="true"></i></span></a></div>
+               <div class="login_bt"><a href="{{ route('login') }}">Login <span style="color: #222222;"><i class="fa fa-user" aria-hidden="true"></i></span></a></div>
             </form>
+            @endguest
          </div>
       </nav>
    </div>
