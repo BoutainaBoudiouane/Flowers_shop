@@ -7,6 +7,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LandingPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,8 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('landingPage.index');
-});
-
+Route::get('/',  [LandingPageController::class, 'index']);
+Route::get('/load-more', [LandingPageController::class, 'loadMore'])->name('load.more');
 //dashboard Admin
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth','admin'])->name('dashboard');
 

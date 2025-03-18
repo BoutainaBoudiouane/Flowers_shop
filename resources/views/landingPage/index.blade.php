@@ -58,6 +58,34 @@
          transform: translateY(-3px);
          box-shadow: 0 5px 15px rgba(229, 24, 123, 0.3);
       }
+      .type-badge {
+            background-color: #E5187B;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+
+        .btn-see-more {
+            background-color: #E5187B;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-see-more:hover {
+            background-color: #C71568;
+            transform: translateY(-2px);
+        }
+
+        .btn-see-more:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
    </style>
 
 </head>
@@ -156,75 +184,40 @@
                <p class="cream_text">A bouquet of joy, crafted just for you.</p>
             </div>
          </div>
-         <div class="cream_section_2">
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p2_mini.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
-                     <div class="card-body d-flex flex-column justify-content-between">
-                        <h6 class="card-title fw-bold mb-2 " style="font-family: Gill Sans;font-size:17px">Blossoms of Joy</h6>
-                        <p class="card-text text-danger fw-bold fs-5 mb-2">100DH</p>
-                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
+         <div class="container py-5">
+            <div class="row" id="flowers-container">
+               @foreach($flowers as $flower)
+               <div class="col-md-4 mb-4">
+                  <div class="card shadow-sm border-0 h-100">
+                     <img src="{{ asset($flower->image) }}"
+                        class="card-img-top p-3"
+                        style="height: 300px; object-fit: contain;">
+                     <div class="card-body">
+                        <h5 class="card-title d-flex align-items-center">
+                           <span style="font-family: 'Gill Sans'; font-size: 1.1rem">
+                              {{ $flower->name }}
+                           </span>
+                           <span class="type-badge ms-2">
+                              {{ $flower->type }}
+                           </span>
+                        </h5>
+                        <p class="text-danger fw-bold fs-5 mb-3">{{ $flower->price }}DH</p>
+                        <a href="#" class="btn w-auto mx-auto px-4 text-black"
+                           style="background-color: #fff; border: 2px solid #E5187B; border-radius: 20px; padding: 6px 20px; width: auto;">
+                           Send Message
+                        </a>
                      </div>
                   </div>
                </div>
-               <div class="col-md-4">
-                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p4_mini.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
-                     <div class="card-body d-flex flex-column justify-content-between">
-                        <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Elegance in Pink</h6>
-                        <p class="card-text text-danger fw-bold fs-5 mb-2">100DH</p>
-                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p1_mini.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
-                     <div class="card-body d-flex flex-column justify-content-between">
-                        <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Summer Bliss Bouquet</h6>
-                        <p class="card-text text-danger fw-bold fs-5 mb-2">100DH</p>
-                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
-                     </div>
-                  </div>
-               </div>
+               @endforeach
             </div>
+
          </div>
-         <div class="cream_section_2">
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p3.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
-                     <div class="card-body d-flex flex-column justify-content-between">
-                        <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Sunshine Blossom Bouquet</h6>
-                        <p class="card-text text-danger fw-bold fs-5 mb-2">300DH</p>
-                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p1.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
-                     <div class="card-body d-flex flex-column justify-content-between">
-                        <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Royal Violet Bouquet</h6>
-                        <p class="card-text text-danger fw-bold fs-5 mb-2">300DH</p>
-                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="card shadow-sm border-0 text-center" style="width: 18rem; height: 500px; overflow: hidden;">
-                     <img src="images/p4.png" class="card-img-top p-3" style="height: 350px; object-fit: contain;">
-                     <div class="card-body d-flex flex-column justify-content-between">
-                        <h6 class="card-title fw-bold mb-2" style="font-family: Gill Sans;font-size:17px">Pretty in Pastels Bouquet</h6>
-                        <p class="card-text text-danger fw-bold fs-5 mb-2">300DH</p>
-                        <a href="#" class="btn w-51 text-black" style="background-color:rgb(255, 255, 255); border-radius: 20px;border-color:#E5187B">Send Message</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="seemore_bt"><a href="#">See More</a></div>
+         <div class="text-center mt-5">
+            <button id="see-more-button" class="btn btn-see-more">
+                See More Flowers
+            </button>
+        </div>
       </div>
    </div>
    <!-- product section end -->
@@ -406,6 +399,39 @@
    <script src="js/custom.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    <!-- javascript -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let currentPage = 1;
+            const initialLoad = 6;
+            const perPage = 3;
+
+            $('#see-more-button').click(function() {
+                currentPage++;
+                const $button = $(this);
+                $button.prop('disabled', true).html('Loading...');
+
+                $.ajax({
+                    url: "{{ route('load.more') }}",
+                    type: "GET",
+                    data: { page: currentPage },
+                    success: function(response) {
+                        if (response.trim()) {
+                            $('#flowers-container').append(response);
+                            $button.prop('disabled', false).html('See More Flowers');
+                           
+                        } else {
+                            $button.prop('disabled', true).html('No More Flowers');
+                        }
+                    },
+                    error: function() {
+                        $button.prop('disabled', false).html('See More Flowers');
+                        alert('Error loading more flowers');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
