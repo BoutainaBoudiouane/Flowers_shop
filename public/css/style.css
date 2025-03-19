@@ -827,7 +827,7 @@ button {
     background-color: transparent !important;
     border-bottom: 1px solid #6d6d6d !important;
     border: 0px;
-    text-transform: uppercase;
+   
 }
 
 input.email-bt::placeholder {
@@ -843,7 +843,7 @@ input.email-bt::placeholder {
     background-color: transparent !important;
     border-bottom: 1px solid #6d6d6d !important;
     border: 0px;
-    text-transform: uppercase;
+   
 }
 
 textarea#comment::placeholder {
@@ -872,7 +872,22 @@ textarea#comment::placeholder {
     color: #252525;
     background-color: #ffffff;
 }
+.main_bt button {
+    width: 100%;
+    float: left;
+    color: #fefefd;
+    font-size: 16px;
+    padding: 10px 0px;
+    background-color: #fc95c4;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
 
+.main_bt button:hover {
+    color: #252525;
+    background-color: #ffffff;
+}
 .location_text {
     width: 100%;
     float: left;

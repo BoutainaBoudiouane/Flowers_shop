@@ -58,34 +58,53 @@
          transform: translateY(-3px);
          box-shadow: 0 5px 15px rgba(229, 24, 123, 0.3);
       }
+
       .type-badge {
-            background-color: #E5187B;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            margin-left: 8px;
-        }
+         background-color: #E5187B;
+         color: white;
+         padding: 4px 12px;
+         border-radius: 15px;
+         font-size: 12px;
+         margin-left: 8px;
+      }
 
-        .btn-see-more {
-            background-color: #E5187B;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
+      .btn-see-more {
+         background-color: #E5187B;
+         color: white;
+         border: none;
+         padding: 12px 30px;
+         border-radius: 25px;
+         font-weight: 600;
+         transition: all 0.3s;
+      }
 
-        .btn-see-more:hover {
-            background-color: #C71568;
-            transform: translateY(-2px);
-        }
+      .btn-see-more:hover {
+         background-color: #C71568;
+         transform: translateY(-2px);
+      }
 
-        .btn-see-more:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-        }
+      .btn-see-more:disabled {
+         background-color: #cccccc;
+         cursor: not-allowed;
+      }
+
+      .form-group {
+         position: relative;
+         z-index: 1;
+      }
+      .carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+    background: none; 
+    border: none;
+}
+.carousel-inner .carousel-item {
+    min-height: 200px; 
+}
    </style>
 
 </head>
@@ -215,9 +234,9 @@
          </div>
          <div class="text-center mt-5">
             <button id="see-more-button" class="btn btn-see-more">
-                See More Flowers
+               See More Flowers
             </button>
-        </div>
+         </div>
       </div>
    </div>
    <!-- product section end -->
@@ -268,38 +287,30 @@
             </div>
          </div>
          <div class="testimonial_section_2">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="testimonial_box">
-                     <div id="main_slider" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                           <div class="carousel-item active">
-                              <p class="testimonial_text">Fast delivery and excellent customer service! I needed a last-minute bouquet for a special occasion, and they made it happen effortlessly. So grateful!</p>
-                              <h4 class="client_name">Mahmoud</h4>
-
-                           </div>
-                           <div class="carousel-item">
-                              <p class="testimonial_text">Absolutely stunning flowers! I ordered a bouquet for my mom's birthday, and she was overjoyed. Fresh, vibrant, and delivered right on time. Highly recommend!</p>
-                              <h4 class="client_name">Ghita</h4>
-
-                           </div>
-                           <div class="carousel-item">
-                              <p class="testimonial_text">I ordered roses for my anniversary, and they were perfect. The arrangement was elegant, and the flowers lasted longer than I expected. Thank you for the amazing service</p>
-                              <h4 class="client_name">Mohamed</h4>
-
-                           </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="testimonial_box">
+                <div id="main_slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach($testimonials as $index => $testimonial)
+                        <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                            <p class="testimonial_text">{{ $testimonial->message }}</p>
+                            <h4 class="client_name">{{ $testimonial->name }}</h4>
                         </div>
-                        <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-                           <i class="fa fa-angle-left"></i>
-                        </a>
-                        <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-                           <i class="fa fa-angle-right"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
+                        @endforeach
+                    </div>
+                    <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
             </div>
-         </div>
+        </div>
+    </div>
+</div>
+
       </div>
    </div>
    <!-- testimonial section end -->
@@ -334,21 +345,23 @@
             <div class="col-md-4">
                <div class="contact_main">
                   <h1 class="contact_taital">Add Testimonial</h1>
-                  <form action="/action_page.php">
+                  <form id="form" action="{{ route('testimonial.store') }}" method="POST">
+                     @csrf
                      <div class="form-group">
-                        <input type="text" class="email-bt" placeholder="Name" name="Name">
+                        <input type="text" class="email-bt" placeholder="Name" name="name" required>
                      </div>
                      <div class="form-group">
-                        <input type="text" class="email-bt" placeholder="Email" name="Name">
+                        <input type="text" class="email-bt" placeholder="Email" name="email" required>
                      </div>
                      <div class="form-group">
-                        <input type="text" class="email-bt" placeholder="Phone Number" name="Email">
+                        <input type="text" class="email-bt" placeholder="Phone Number" name="phone_number" required>
                      </div>
                      <div class="form-group">
-                        <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Massage"></textarea>
+                        <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="message" required></textarea>
                      </div>
+                     <div class="main_bt"><button type="submit">SEND</button></div>
                   </form>
-                  <div class="main_bt"><a href="#">SEND</a></div>
+
                </div>
             </div>
             <div class="col-md-8">
@@ -400,38 +413,40 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    <!-- javascript -->
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            let currentPage = 1;
-            const initialLoad = 6;
-            const perPage = 3;
+   <script>
+      $(document).ready(function() {
+         let currentPage = 1;
+         const initialLoad = 6;
+         const perPage = 3;
 
-            $('#see-more-button').click(function() {
-                currentPage++;
-                const $button = $(this);
-                $button.prop('disabled', true).html('Loading...');
+         $('#see-more-button').click(function() {
+            currentPage++;
+            const $button = $(this);
+            $button.prop('disabled', true).html('Loading...');
 
-                $.ajax({
-                    url: "{{ route('load.more') }}",
-                    type: "GET",
-                    data: { page: currentPage },
-                    success: function(response) {
-                        if (response.trim()) {
-                            $('#flowers-container').append(response);
-                            $button.prop('disabled', false).html('See More Flowers');
-                           
-                        } else {
-                            $button.prop('disabled', true).html('No More Flowers');
-                        }
-                    },
-                    error: function() {
-                        $button.prop('disabled', false).html('See More Flowers');
-                        alert('Error loading more flowers');
-                    }
-                });
+            $.ajax({
+               url: "{{ route('load.more') }}",
+               type: "GET",
+               data: {
+                  page: currentPage
+               },
+               success: function(response) {
+                  if (response.trim()) {
+                     $('#flowers-container').append(response);
+                     $button.prop('disabled', false).html('See More Flowers');
+
+                  } else {
+                     $button.prop('disabled', true).html('No More Flowers');
+                  }
+               },
+               error: function() {
+                  $button.prop('disabled', false).html('See More Flowers');
+                  alert('Error loading more flowers');
+               }
             });
-        });
-    </script>
+         });
+      });
+   </script>
 </body>
 
 </html>

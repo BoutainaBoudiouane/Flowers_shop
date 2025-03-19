@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Flower;
+use App\Models\Testimonial;
+
 
 class LandingPageController extends Controller
 {
@@ -12,9 +14,10 @@ class LandingPageController extends Controller
     {
         // Fetch all flowers from the database
         $flowers = Flower::take(6)->get();
+        $testimonials = Testimonial::all();
 
         // Pass the flowers data to the view
-        return view('landingPage.index', compact('flowers'));
+        return view('landingPage.index', compact('flowers','testimonials'));
     }
 
     public function loadMore(Request $request)
@@ -29,4 +32,5 @@ class LandingPageController extends Controller
         return view('landingPage.partials', compact('flowers'))->render();
     }
 
+   
 }

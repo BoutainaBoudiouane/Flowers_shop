@@ -25,4 +25,28 @@ class TestimonialController extends Controller
 
         return redirect()->back()->with('success', 'Testimonial deleted successfully!');
     }
+
+    //add testimonial landing page
+    public function store(Request $request)
+    {
+        // Validate the request data
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone_number' => 'required|string|max:255',
+            'message' => 'required|string|max:1000',
+        ]);
+
+        // Create a new testimonial
+        Testimonial::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone_number' => $request->phone_number,
+            'message' => $request->message,
+        ]);
+
+        // Redirect back with a success message
+        return redirect()->back()->with('success', 'Thank you for your testimonial!');
+    }
+
 }

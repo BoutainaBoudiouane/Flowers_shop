@@ -22,6 +22,8 @@ use App\Http\Controllers\LandingPageController;
 
 Route::get('/',  [LandingPageController::class, 'index']);
 Route::get('/load-more', [LandingPageController::class, 'loadMore'])->name('load.more');
+Route::post('/testimonials/store', [TestimonialController::class, 'store'])->name('testimonial.store');
+
 //dashboard Admin
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth','admin'])->name('dashboard');
 
