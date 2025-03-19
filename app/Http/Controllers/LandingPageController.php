@@ -15,9 +15,9 @@ class LandingPageController extends Controller
         // Fetch all flowers from the database
         $flowers = Flower::take(6)->get();
         $testimonials = Testimonial::all();
-
+        $whatsappNumber = env('WHATSAPP_NUMBER');
         // Pass the flowers data to the view
-        return view('landingPage.index', compact('flowers','testimonials'));
+        return view('landingPage.index', compact('flowers','testimonials','whatsappNumber'));
     }
 
     public function loadMore(Request $request)
@@ -28,8 +28,8 @@ class LandingPageController extends Controller
         $flowers = Flower::skip($offset)
                         ->take(3)
                         ->get();
-
-        return view('landingPage.partials', compact('flowers'))->render();
+     $whatsappNumber = env('WHATSAPP_NUMBER');
+        return view('landingPage.partials', compact('flowers','whatsappNumber'))->render();
     }
 
    

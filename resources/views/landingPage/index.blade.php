@@ -92,19 +92,21 @@
          position: relative;
          z-index: 1;
       }
+
       .carousel-control-prev,
-.carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    height: auto;
-    background: none; 
-    border: none;
-}
-.carousel-inner .carousel-item {
-    min-height: 200px; 
-}
+      .carousel-control-next {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         width: auto;
+         height: auto;
+         background: none;
+         border: none;
+      }
+
+      .carousel-inner .carousel-item {
+         min-height: 200px;
+      }
    </style>
 
 </head>
@@ -213,16 +215,21 @@
                         style="height: 300px; object-fit: contain;">
                      <div class="card-body">
                         <h5 class="card-title d-flex align-items-center">
-                           <span style="font-family: 'Gill Sans'; font-size: 1.1rem">
+                           <span style="font-family: 'Gill Sans'; font-size: 25px; font-weight:bold;">
                               {{ $flower->name }}
                            </span>
                            <span class="type-badge ms-2">
                               {{ $flower->type }}
                            </span>
                         </h5>
+                        <span class="text-muted small mb-0" style="line-height: 1.5;">
+                           {{ $flower->description }}
+                        </span>
                         <p class="text-danger fw-bold fs-5 mb-3">{{ $flower->price }}DH</p>
-                        <a href="#" class="btn w-auto mx-auto px-4 text-black"
-                           style="background-color: #fff; border: 2px solid #E5187B; border-radius: 20px; padding: 6px 20px; width: auto;">
+                        <a href="https://wa.me/{{ $whatsappNumber }}?text={{ urlencode("Hello! I would like to inquire about {$flower->name}. Please provide more details.") }}"
+                           class="btn text-black"
+                           target="_blank"
+                           style="background-color: #fff; border: 2px solid #E5187B; border-radius: 20px;margin-left:220px;">
                            Send Message
                         </a>
                      </div>
@@ -287,29 +294,29 @@
             </div>
          </div>
          <div class="testimonial_section_2">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="testimonial_box">
-                <div id="main_slider" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        @foreach($testimonials as $index => $testimonial)
-                        <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                            <p class="testimonial_text">{{ $testimonial->message }}</p>
-                            <h4 class="client_name">{{ $testimonial->name }}</h4>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="testimonial_box">
+                     <div id="main_slider" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                           @foreach($testimonials as $index => $testimonial)
+                           <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                              <p class="testimonial_text">{{ $testimonial->message }}</p>
+                              <h4 class="client_name">{{ $testimonial->name }}</h4>
+                           </div>
+                           @endforeach
                         </div>
-                        @endforeach
-                    </div>
-                    <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
+                        <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                           <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                           <i class="fa fa-angle-right"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</div>
+         </div>
 
       </div>
    </div>
