@@ -147,7 +147,7 @@
          </div>
       </nav>
    </div>
-   <!-- banner section start -->
+   <!-- banner home start -->
    <div class="header_section" id="home">
       <div class="banner_section layout_padding">
          <div class="container">
@@ -155,7 +155,6 @@
                <div class="row">
                   <div class="col-sm-6">
                      <h1 class="banner_taital">A simple flower can light up someone's world with happiness.</h1>
-
                      <div class="started_text"><a href="#flower">Browse Flowers</a></div>
                   </div>
                   <div class="col-sm-6">
@@ -166,7 +165,7 @@
          </div>
       </div>
    </div>
-   <!-- banner section end -->
+   <!-- banner home end -->
 
    <!-- about section start -->
    <div class="about_section layout_padding" id="about">
@@ -196,6 +195,7 @@
       </div>
    </div>
    <!-- about section end -->
+
    <!-- product section start -->
    <div class="cream_section layout_padding" id="flower">
       <div class="container">
@@ -237,7 +237,6 @@
                </div>
                @endforeach
             </div>
-
          </div>
          <div class="text-center mt-5">
             <button id="see-more-button" class="btn btn-see-more">
@@ -247,6 +246,7 @@
       </div>
    </div>
    <!-- product section end -->
+
    <!-- services section start -->
    <div class="services_section layout_padding" id="event">
       <div class="container">
@@ -285,6 +285,7 @@
       </div>
    </div>
    <!-- services section end -->
+
    <!-- testimonial section start -->
    <div class="testimonial_section layout_padding" id="testimonial">
       <div class="container">
@@ -317,10 +318,11 @@
                </div>
             </div>
          </div>
-
       </div>
    </div>
    <!-- testimonial section end -->
+
+   <!-- Gallery section start -->
    <div class=" mt-6">
       <div class="row g-1 gallery">
          <div class="col-12 col-sm-6 col-md-2">
@@ -341,9 +343,9 @@
          <div class="col-12 col-sm-6 col-md-2">
             <img src="images/gal_5.jpg" class="img-fluid rounded" alt="Image 6">
          </div>
-
       </div>
    </div>
+  <!-- Gallery section start -->
 
    <!-- contact section start -->
    <div class="contact_section layout_padding" id="contact">
@@ -368,7 +370,6 @@
                      </div>
                      <div class="main_bt"><button type="submit">SEND</button></div>
                   </form>
-
                </div>
             </div>
             <div class="col-md-8">
@@ -390,7 +391,6 @@
                      </li>
                   </ul>
                </div>
-
                <div class="footer_social_icon">
                   <ul>
                      <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -455,5 +455,4 @@
       });
    </script>
 </body>
-
 </html>

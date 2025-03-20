@@ -1,4 +1,3 @@
-<!-- resources/views/FlowerPage/deleteFlower.blade.php -->
 <!-- Delete Flower Modal -->
 <div class="modal fade" id="deleteFlowerModal{{ $flower->id }}" tabindex="-1" aria-labelledby="deleteFlowerModalLabel{{ $flower->id }}" aria-hidden="true">
     <div class="modal-dialog">
@@ -13,9 +12,8 @@
                 <div class="text-center mb-4">
                     <img src="{{ asset($flower->image) }}" alt="{{ $flower->name }}" class="img-fluid mb-3" style="max-height: 150px;">
                     <h5>{{ $flower->name }}</h5>
-                    <p class="text-muted">{{ ucfirst(str_replace('_', ' ', $flower->type)) }} - ${{ number_format($flower->price, 2) }}</p>
-                </div>
-                
+                    <p class="text-muted">{{ ucfirst(str_replace('_', ' ', $flower->type)) }} - {{ number_format($flower->price, 2) }} DH</p>
+                </div>     
                 <div class="alert alert-warning">
                     <i class="bi bi-exclamation-circle me-2"></i>
                     Are you sure you want to delete this flower? This action cannot be undone.

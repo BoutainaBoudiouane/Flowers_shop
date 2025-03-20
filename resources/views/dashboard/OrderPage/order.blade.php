@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Garden Glow</title>
     <link rel="icon" type="image/png" href="images/logo_onglet.png">
-
     <!-- Fonts and icons -->
     <script src="assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
@@ -33,8 +32,6 @@
     <link rel="stylesheet" href="assets/css/plugins.min.css" />
     <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
 
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="assets/css/demo.css" />
 </head>
 
 <body>
@@ -79,7 +76,6 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a
                                 href="{{ route('flower') }}"
@@ -159,7 +155,6 @@
                         </nav>
 
                         <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
-
                             <li class="nav-item topbar-user dropdown hidden-caret">
                                 <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
                                     <div class="avatar-sm">
@@ -284,8 +279,6 @@
 
                                                 </tr>
                                                 @endforeach
-
-
                                             </tbody>
                                         </table>
                                     </div>
@@ -298,17 +291,13 @@
             </div>
         </div>
 
-        <!--  add model-->
-
-
+        <!-- model-->
         @include('dashboard.OrderPage.addOrder', ['flowers' => $flowers])
 
         @foreach($orders as $order)
         @include('dashboard.OrderPage.updateOrder', ['order' => $order, 'flowers' => $flowers])
         @include('dashboard.OrderPage.deleteOrder', ['order' => $order])
-
         @endforeach
-
 
         <!--   Core JS Files   -->
         <script src="assets/js/core/jquery-3.7.1.min.js"></script>

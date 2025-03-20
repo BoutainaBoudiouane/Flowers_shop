@@ -31,6 +31,5 @@ class LandingPageController extends Controller
      $whatsappNumber = env('WHATSAPP_NUMBER');
         return view('landingPage.partials', compact('flowers','whatsappNumber'))->render();
     }
-
    
 }

@@ -1,4 +1,3 @@
-
 <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -18,7 +17,6 @@
                             <input type="text" class="form-control form-control-lg" id="productName" name="name"
                                 placeholder="Enter product name" required>
                         </div>
-
                         <!-- Product Type -->
                         <div class="col-md-6 mb-3">
                             <label for="productType" class="form-label fw-semibold">Type</label>
@@ -32,25 +30,21 @@
                                 <option value="women">Women</option>
                             </select>
                         </div>
-
                         <!-- Product Price -->
                         <div class="col-md-6 mb-3">
                             <label for="productPrice" class="form-label fw-semibold">Price</label>
                             <div class="input-group">
-                               
                                 <input type="number" class="form-control form-control-lg" id="productPrice"
                                     name="price" step="0.01" min="0" placeholder="0.00" required>
                                     <span class="input-group-text">DH</span>
                             </div>
                         </div>
-
                         <!-- Product Image -->
                         <div class="col-md-12 mb-3">
                             <label for="productImage" class="form-label fw-semibold">Flower Image</label>
                             <input type="file" class="form-control form-control-lg" id="productImage" name="image" accept="image/*">
                             <div class="form-text">Upload a clear image of your product (Max: 2MB)</div>
                         </div>
-
                         <!-- Product Description -->
                         <div class="col-md-12 mb-3">
                             <label for="productDescription" class="form-label fw-semibold">Description</label>

@@ -72,7 +72,6 @@
         </div>
     </div>
 </div>
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Function to calculate total price for a specific modal

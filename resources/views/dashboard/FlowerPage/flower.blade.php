@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Garden Glow</title>
     <link rel="icon" type="image/png" href="images/logo_onglet.png">
-
     <!-- Fonts and icons -->
     <script src="assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
@@ -33,8 +32,6 @@
     <link rel="stylesheet" href="assets/css/plugins.min.css" />
     <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
 
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="assets/css/demo.css" />
 </head>
 
 <body>
@@ -79,7 +76,6 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a
                                 href="{{ route('flower') }}"
@@ -157,9 +153,7 @@
                         <nav
                             class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
                         </nav>
-
                         <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
-
                             <li class="nav-item topbar-user dropdown hidden-caret">
                                 <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
                                     <div class="avatar-sm">
@@ -241,7 +235,6 @@
                                                     <th>Description</th>
                                                     <th>Price</th>
                                                     <th>Type</th>
-
                                                 </tr>
                                             </tfoot>
 
@@ -279,29 +272,23 @@
 
                                                 </tr>
                                                 @endforeach
-
-
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
         </div>
 
-        <!--  add model-->
+        <!--   model-->
         @include('dashboard.FlowerPage.addFlower')
-
 
         @foreach($flowers as $flower)
         @include('dashboard.FlowerPage.updateFlower', ['flower' => $flower])
         @include('dashboard.FlowerPage.deleteFlower', ['flower' => $flower])
-
         @endforeach
 
         <!--   Core JS Files   -->
@@ -323,7 +310,6 @@
 
         <!-- Datatables -->
         <script src="assets/js/plugin/datatables/datatables.min.js"></script>
-
 
         <!-- jQuery Vector Maps -->
         <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>

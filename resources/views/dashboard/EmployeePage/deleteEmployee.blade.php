@@ -8,13 +8,10 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="text-center mb-4">
-                   
+                <div class="text-center mb-4">   
                 <h5>{{ $employee->name }}</h5>
                 <p class="text-muted">{{ $employee->post}}</p>
-                  
                 </div>
-                
                 <div class="alert alert-warning">
                     <i class="bi bi-exclamation-circle me-2"></i>
                     Are you sure you want to delete this employee? This action cannot be undone.

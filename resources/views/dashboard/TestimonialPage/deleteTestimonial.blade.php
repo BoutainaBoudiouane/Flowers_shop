@@ -8,12 +8,9 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="text-center mb-4">
-                   
-                    <h5>{{ $testimonial->message }}</h5>
-                  
+                <div class="text-center mb-4">   
+                    <h5>{{ $testimonial->message }}</h5> 
                 </div>
-                
                 <div class="alert alert-warning">
                     <i class="bi bi-exclamation-circle me-2"></i>
                     Are you sure you want to delete this message? This action cannot be undone.

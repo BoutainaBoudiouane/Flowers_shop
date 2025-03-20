@@ -33,8 +33,6 @@
     <link rel="stylesheet" href="assets/css/plugins.min.css" />
     <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
 
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="assets/css/demo.css" />
 </head>
 
 <body>
@@ -79,7 +77,6 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a
                                 href="{{ route('flower') }}"
@@ -116,7 +113,6 @@
                                 <p>Testimonials</p>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -226,8 +222,6 @@
                                                     <th>Phone Number</th>
                                                     <th>message</th>
                                                     <th>Action</th>
-
-
                                                 </tr>
                                             </thead>
 
@@ -252,28 +246,22 @@
                                                             </button>
                                                         </div>
                                                     </td>
-
                                                 </tr>
                                                 @endforeach
-
-
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
 
-        <!--  add model-->
-
+        <!--model-->
         @foreach($testimonials as $testimonial)
         @include('dashboard.TestimonialPage.deleteTestimonial', ['testimonial' => $testimonial])
-
         @endforeach
         <!--   Core JS Files   -->
         <script src="assets/js/core/jquery-3.7.1.min.js"></script>
@@ -294,7 +282,6 @@
 
         <!-- Datatables -->
         <script src="assets/js/plugin/datatables/datatables.min.js"></script>
-
 
         <!-- jQuery Vector Maps -->
         <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>

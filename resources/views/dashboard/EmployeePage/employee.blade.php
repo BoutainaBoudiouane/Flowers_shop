@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Garden Glow</title>
     <link rel="icon" type="image/png" href="images/logo_onglet.png">
-
     <!-- Fonts and icons -->
     <script src="assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
@@ -33,8 +32,6 @@
     <link rel="stylesheet" href="assets/css/plugins.min.css" />
     <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
 
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="assets/css/demo.css" />
 </head>
 
 <body>
@@ -159,7 +156,6 @@
                         </nav>
 
                         <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
-
                             <li class="nav-item topbar-user dropdown hidden-caret">
                                 <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
                                     <div class="avatar-sm">
@@ -285,8 +281,6 @@
 
                                                 </tr>
                                                 @endforeach
-
-
                                             </tbody>
                                         </table>
                                     </div>
@@ -299,14 +293,12 @@
             </div>
         </div>
 
-        <!--  add model-->
-
+        <!-- model-->
         @include('dashboard.EmployeePage.addEmployee')
 
         @foreach($employees as $employee)
         @include('dashboard.EmployeePage.updateEmployee', ['employee' => $employee])
         @include('dashboard.EmployeePage.deleteEmployee', ['employee' => $employee])
-
         @endforeach
 
         <!--   Core JS Files   -->
@@ -329,7 +321,6 @@
         <!-- Datatables -->
         <script src="assets/js/plugin/datatables/datatables.min.js"></script>
 
-
         <!-- jQuery Vector Maps -->
         <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
         <script src="assets/js/plugin/jsvectormap/world.js"></script>
@@ -341,7 +332,6 @@
         <script src="assets/js/kaiadmin.min.js"></script>
         <script>
             $(document).ready(function() {
-
                 $("#multi-filter-select").DataTable({
                     pageLength: 5,
                     initComplete: function() {
@@ -376,5 +366,4 @@
             });
         </script>
 </body>
-
 </html>
