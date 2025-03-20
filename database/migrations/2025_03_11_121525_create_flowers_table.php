@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('price', 8, 2);
             $table->string('image')->nullable();
             $table->enum('type', ['mini_bouquet', 'large_bouquet', 'valentine', 'wedding', 'mother', 'women']);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('flowers');
+        Schema::dropSoftDeletes();
     }
 };
