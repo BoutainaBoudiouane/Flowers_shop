@@ -18,7 +18,7 @@
                             <select class="form-select form-select-lg" id="flower_id" name="flower_id" required>
                                 <option value="" selected disabled>Select a flower</option>
                                 @foreach ($flowers as $flower)
-                                    <option value="{{ $flower->id }}" data-price="{{ $flower->price }}">{{ $flower->name }}</option>
+                                    <option value="{{ $flower->id }}" data-price="{{ $flower->price }}">{{ $flower->name }} - {{ $flower->type }}</option>
                                 @endforeach
                             </select>
                         </div>

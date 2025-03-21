@@ -247,7 +247,11 @@
                                                 @foreach ($orders as $order)
                                                 <tr>
                                                     <td>{{ $order->id }}</td>
-                                                    <td>{{ $order->flower->name }}</td>
+                                                    <td>{{ $order->flower->name }} 
+                                                        <span class="badge badge-secondary ms-2">
+                                                            {{ $order->flower->type }}
+                                                        </span>
+                                                    </td>
                                                     <td>{{ $order->quantity }}</td>
                                                     <td>{{ $order->total_price }} DH</td>
                                                     <td>{{ $order->status }}</td>
